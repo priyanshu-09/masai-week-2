@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<head>
+	<style type="text/css">
+		*{
+			text-align: center;
+		}
+		.keys{
+			background-color: black;
+			height: 50px;
+			width: 50px;
+			text-align: center;
+			float: left;
+			color: white;
+			margin: 10px;
+		}
+		.numbers{
+			text-indent: 35px;
+			text-align: left;
+		}
+		#main_bar{
+			height: 20px;
+			width: 750px;
+			border: 7px;
+			border-style: solid;
+			text-align: center;
+			margin: 10px;
+		}
+		#space_bar{
+			height: 50px;
+			width: 400px;
+			background-color: black;
+			margin: 10px;
+		}
+		.main_keys{
+			height: 50px;
+			width: 80px;
+			border: 5px;
+			border-style: solid;
+			margin: 10px;
+            float:left;
+		}
+		#first{
+			height: 70px;
+			width: 800px;
+            text-indent:50px;
+		}
+		#second{
+			height: 70px;
+			width: 700px;
+		}
+		#third{
+			height: 70px;
+			width: 660px;
+		}
+		#fourth{
+			height: 70px;
+			width: 600px;
+		}
+		#button{
+			height: 70px;
+			width: 550px;
+			float: left;
+		}
+		.GREEN{
+			color: green;
+		}
+		#button_big_box{
+			height: 140px;
+			width: 550px
+
+		}
+		.black{
+			background-color: black;
+		}
+		.green{
+			background-color: green;
+		}
+	</style>
+</head>
+<body>
+	<div id="main_bar">
+		<input type="text" name="Type here" size="91" id="input_bar">
+	</div><br>
+	<div id="first">
+		<div class="keys numbers"><button  class="keys numbers" onclick="numbers(1)">
+			!
+			<br>
+			1
+		</div></button>
+		<div class="keys numbers"><button  class="keys numbers" onclick="numbers(2)">
+			@
+			<br>
+			2
+		</div></button>
+		<div class="keys numbers"><button  class="keys numbers" onclick="numbers(3)">
+			#
+			<br>
+			3
+		</div></button>
+		<div class="keys numbers"><button  class="keys numbers" onclick="numbers(4)">
+			$
+			<br>
+			4
+		</div></button>
+		<div class="keys numbers"><button  class="keys numbers" onclick="numbers(5)">
+			%
+			<br>
+			5
+		</div></button>
+		<div class="keys numbers"><button  class="keys numbers" onclick="numbers(6)">
+			^
+			<br>
+			6
+		</div></button>
+		<div class="keys numbers"><button  class="keys numbers" onclick="numbers(7)">
+			&
+			<br>
+			7
+		</div></button>
+		<div class="keys numbers"><button  class="keys numbers" onclick="numbers(8)">
+			*
+			<br>
+			8
+		</div></button>
+		<div class="keys numbers"><button  class="keys numbers" onclick="numbers(9)">
+			(
+			<br>
+			9
+		</div></button>
+		<div class="keys numbers"><button  class="keys numbers" onclick="numbers(0)">
+			)
+			<br>
+			0
+		</div></button>
+		<div class="keys"><button  class="keys " onclick="del()">
+			DEL
+		</div></button>
+	</div>
+	<div id="second">
+		<div class="keys"><button class="keys" onclick="letters('q')">
+		Q
+		</div></button>
+		<div class="keys"><button class="keys" onclick="letters('w')">
+		W
+		</div></button>
+		<div class="keys"><button class="keys" onclick="letters('e')">
+		E
+		</div></button>
+		<div class="keys"><button class="keys" onclick="letters('r')">
+		R
+		</div></button>
+		<div class="keys"><button class="keys" onclick="letters('t')">
+		T
+		</div></button>
+		<div class="keys"><button class="keys" onclick="letters('y')">
+		Y
+		</div></button>
+		<div class="keys"><button class="keys" onclick="letters('u')">
+		U
+		</div></button>
+		<div class="keys"><button class="keys" onclick="letters('i')">
+		I
+		</div></button>
+		<div class="keys"><button class="keys" onclick="letters('o')">
+		O
+		</div></button>
+		<div class="keys"><button class="keys" onclick="letters('p')">
+		P
+		</div></button>
+	</div>
+	<div id="third">
+		<div class="keys"><button class="keys" onclick="letters('a')">
+		A
+		</div></button>
+		<div class="keys"><button class="keys" onclick="letters('s')">
+		S
+		</div></button>
+		<div class="keys"><button class="keys" onclick="letters('d')">
+		D
+		</div></button>
+		<div class="keys"><button class="keys" onclick="letters('f')">
+		F
+		</div></button>
+		<div class="keys"><button class="keys" onclick="letters('g')">
+		G
+		</div></button>
+		<div class="keys"><button class="keys" onclick="letters('h')">
+		H
+		</div></button>
+		<div class="keys"><button class="keys" onclick="letters('j')">
+		J
+		</div></button>
+		<div class="keys"><button class="keys" onclick="letters('k')">
+		K
+		</div></button>
+		<div class="keys"><button class="keys" onclick="letters('l')">
+		L
+		</div></button>
+	</div>
+	<div id="fourth">
+		<div class="keys"><button class="keys" onclick="letters('z')">
+		Z
+		</div></button>
+		<div class="keys"><button class="keys" onclick="letters('x')">
+		X
+		</div></button>
+		<div class="keys"><button class="keys" onclick="letters('c')">
+		C
+		</div></button>
+		<div class="keys"><button class="keys" onclick="letters('v')">
+		V
+		</div></button>
+		<div class="keys"><button class="keys" onclick="letters('b')">
+		B
+		</div></button>
+		<div class="keys"><button class="keys" onclick="letters('n')">
+		N
+		</div></button>
+		<div class="keys"><button class="keys" onclick="letters('m')">
+		M
+		</div></button>
+		<div class="keys"><button class="keys" onclick="letters('.com')">
+		.com
+		</div></button>
+	</div>
+	<div id="space_bar">
+
+		<button id="space_bar" onclick="spa()">
+		
+		</button>
+		
+	</div>
+	<div id="button_big_box">
+		<div class="button">
+			<div class="main_keys "><button class="main_keys" onclick="off()">
+				CAPS
+			</div></button>
+			<div class="main_keys"><button class="main_keys" onclick="shiftoff()">
+				SHIFT
+			</div></button>
+			<div class="main_keys"><button class="main_keys" onclick="passwdoff()">
+				PASSWD
+			</div></button>
+			<div class="main_keys"><button class="main_keys" onclick="cleanoff()">
+				CLEAN
+			</div></button>
+			<div class="main_keys"><button class="main_keys" onclick="revon()">
+				REV
+			</div></button>
+		</div><br>
+		<div class="button GREEN">
+			<div class="main_keys"><button class="main_keys GREEN"onclick="on()">
+				CAPS
+			</div></button>
+			<div class="main_keys"><button class="main_keys GREEN" onclick="shifton()">
+				SHIFT
+			</div></button>
+			<div class="main_keys"><button class="main_keys GREEN"onclick="passwdon()">
+				PASSWD
+			</div></button>
+			<div class="main_keys"><button class="main_keys GREEN"onclick="cleanon()">
+				CLEAN
+			</div></button>
+			<div class="main_keys"><button class="main_keys GREEN" onclick="revon()">
+				REV
+			</div></button>
+		</div>
+	</div>
+	<script type="text/javascript">
+		
+		
+		var countCAPS =false;
+		var password =false;
+
+		function off(){
+			countCAPS=false;
+
+		}
+		function on(){
+					countCAPS=true;
+		}
+		var temp;
+		
+		function passwdon(){
+			var w1=document.getElementById('input_bar').value;
+			temp = w1
+			var w2= ''
+			for (var i=0; i<=w1.length-2;i++){
+				w2 +='*'
+			}var w3= w2+ w1[w1.length-1]
+			document.getElementById('input_bar').value = w3
+		}
+		function passwdoff(){
+			document.getElementById('input_bar').value = temp;
+		}
+		
+		
+		function letters(input){
+
+				if (countCAPS==false ) {
+					
+					document.getElementById('input_bar').value += input;
+					}
+			
+				
+				else{
+					
+						switch(input){
+							case 'q':
+							print= 'Q';
+							break;
+
+							case 'w':
+							print= 'W';
+							break;
+
+							case 'e':
+							print= 'E';
+							break;
+
+							case 'r':
+							print= 'R';
+							break;
+
+							case 't':
+							print= 'T';
+							break;
+
+							case 'y':
+							print= 'Y';
+							break;
+
+							case 'u':
+							print= 'U';
+							break;
+
+							case 'i':
+							print= 'I';
+							break;
+
+							case 'o':
+							print= 'O';
+							break;
+
+							case 'p':
+							print= 'P';
+							break;
+
+							case 'a':
+							print= 'A';
+							break;
+
+							case 's':
+							print= 'S';
+							break;
+
+							case 'd':
+							print= 'D';
+							break;
+
+							case 'f':
+							print= 'F';
+							break;
+
+							case 'g':
+							print= 'G';
+							break;
+
+							case 'h':
+							print= 'H';
+							break;
+
+							case 'j':
+							print= 'J';
+							break;
+
+							case 'k':
+							print= 'K';
+							break;
+
+							case 'l':
+							print= 'L';
+							break;
+
+							case 'z':
+							print= 'Z';
+							break;
+
+							case 'x':
+							print= 'X';
+							break;
+
+							case 'c':
+							print= 'C';
+							break;
+
+							case 'v':
+							print= 'V';
+							break;
+
+							case 'b':
+							print= 'B';
+							break;
+
+							case 'n':
+							print= 'N';
+							break;
+
+							case 'm':
+							print= 'M';
+							break;
+
+							default:
+							print = input;
+							break;
+						}
+						
+				document.getElementById('input_bar').value += print;
+				}	
+			}
+			
+		
+		function del(){
+			var p1 = document.getElementById('input_bar').value;
+    		var p2=''
+      		for(var i=0; i<=p1.length-2;i++){
+        		p2 += p1[i]
+    		 }
+			document.getElementById('input_bar').value = p2;
+    	}
+
+		function spa(){
+			document.getElementById('input_bar').value += " ";
+		}
+
+		var shift= false;
+		function shifton(){
+			shift=true
+		}
+		function shiftoff(){
+			shift=false
+		}
+		function numbers(input){
+			if (shift==false){
+				document.getElementById('input_bar').value += input;
+			}
+			else{
+				switch(input){
+					case 1:
+					print='!'
+					break;
+
+					case 2:
+					print='@'
+					break;
+
+					case 3:
+					print='#'
+					break;
+
+					case 4:
+					print='$'
+					break;
+
+					case 5:
+					print='%'
+					break;
+
+					case 6:
+					print='^'
+					break;
+
+					case 7:
+					print='&'
+					break;
+
+					case 8:
+					print='*'
+					break;
+
+					case 9:
+					print='('
+					break;
+
+					case 0:
+					print=')'
+					break;
+				}
+			document.getElementById('input_bar').value += print;
+			}
+		}
+
+		function revon(){
+			var d1 = document.getElementById('input_bar').value;
+			var d2=''
+			for (var i=d1.length-1;i>=0;i--){
+				d2 += d1[i]
+			}document.getElementById('input_bar').value =d2
+		}
+		function cleanon(){
+			var e1 = document.getElementById('input_bar').value;
+			switch(e1){
+				case 'anus':
+				print='a**s';
+				break;
+
+				case 'ANUS':
+				print='A**S';
+				break;
+
+				case 'ASS':
+				print='A*S';
+				break;
+
+				case 'APESHIT':
+				print='A*****T';
+				break;
+
+				case 'ANAL':
+				print='A**L';
+				break;
+
+				case 'DICK':
+				print='D**K';
+				break;
+
+
+				case 'ass':
+				print='a*s';
+				break;
+
+				case 'arsehole':
+				print='a******e';
+				break;
+
+				case 'assmunch':
+				print='a******h';
+				break;
+
+				case 'apeshit':
+				print='a*****t';
+				break;
+
+				case 'arse':
+				print='a**e';
+				break;
+
+				case '2g1c':
+				print='2**c';
+				break;
+
+				case 'anal':
+				print='a**l';
+				break;
+
+				case 'dvda':
+				print='d**a';
+				break;
+
+				case 'dick':
+				print='d**k';
+				break;
+
+			}document.getElementById('input_bar').value=print;
+		}
+		function cleanoff(){
+			var e1 = document.getElementById('input_bar').value;
+			switch(e1){
+				case 'a**s':
+				print='anus';
+				break;
+
+				case 'A**S':
+				print='ANUS';
+				break;
+
+				case 'A*S':
+				print='ASS';
+				break;
+
+				case 'A*****T':
+				print='APESHIT';
+				break;
+
+				case 'A**L':
+				print='ANAL';
+				break;
+
+				case 'D**K':
+				print='DICK';
+				break;
+
+				case 'a*s':
+				print='ass';
+				break;
+
+				case 'a******e':
+				print='arsehole';
+				break;
+
+				case 'a******h':
+				print='assmunch';
+				break;
+
+				case 'a*****t':
+				print='apeshit';
+				break;
+
+				case 'a**e':
+				print='arse';
+				break;
+
+				case '2**c':
+				print='2g1c';
+				break;
+
+				case 'a**l':
+				print='anal';
+				break;
+
+				case 'd**a':
+				print='dvda';
+				break;
+
+				case 'd**k':
+				print='dick';
+				break;
+
+			}document.getElementById('input_bar').value=print;
+		}
+	</script>
+</body>
